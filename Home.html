@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If else structure</title>
+</head>
+<body>
+<div>
+    <input type="number" id="ida">
+    <input type="number" id="idb">
+    <input type="button" onclick="checkAchiab()" value="check">
+</div>
+
+
+<div>
+    <input type="number" id="check">
+    <input type="button" onclick="checkTuoi()" value="Check tuoi vao lop 10">
+</div>
+<div>
+    <input type="number" id="idInput1">
+    <input type="button" value="Check" onclick="checkAmDuong()">
+    </div>
+<script>
+    function checkAchiab() {
+        let a = parseInt(document.getElementById('ida').value);
+        let b = parseInt(document.getElementById('idb').value);
+        if (a % b == 0) {
+            alert(a + " chia het cho " + b)
+        } else alert(a + "Khong chia hetcho " + b)
+    }
+
+    function checkTuoi() {
+        let tuoi = parseInt(document.getElementById('check').value);
+        if (tuoi < 10 || tuoi > 30) {
+            alert("Your age do not matching");
+        }
+    }
+
+    function checkAmDuong() {
+        let input=parseInt(document.getElementById('idInput1').value);
+        if (input>0){
+             alert("your input > 0")
+        }
+        else if (input<0){
+            alert("Your input <0")
+        }
+        else alert("Your input = 0")
+    }
+
+
+</script>
+</body>
+</html>
